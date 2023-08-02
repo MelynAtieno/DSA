@@ -32,7 +32,7 @@ prepend(value){
 //Add an element at the end of the list. Algorithmic Complexity = O(1)
 append(value){
     //create a new node
-    const newNode = new Node(value, this.tail);
+    const newNode = new Node(value, null);
         // Change the tail to be the newly created node
         this.tail = newNode;
         //Check if the LinkedList is empty.
