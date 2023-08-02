@@ -15,10 +15,40 @@ class LinkedList{
         this.tail = null; // Last node on the LinkedList
     }
 
-//Algorithmic Complexity
 
-// Add an element at the start of the list
-prepend
+
+// Add an element at the start of the list. Algorithmic Complexity - O(1) = constant time
+prepend(value){
+// create a new node
+    const newNode = new Node(value, this.head);
+        // Change head to be the newly created node
+        this.head = newNode;
+        //Check if the LinkedList was empty. If the LinkedList was empty, the new node will be the tail and the head.
+        this.tail = this.tail ? this.tail : newNode;
+
+        return this;
+    }
+
+//Add an element at the end of the list. Algorithmic Complexity = O(1)
+append(value){
+    //create a new node
+    const newNode = new Node(value, this.tail);
+        // Change the tail to be the newly created node
+        this.tail = newNode;
+        //Check if the LinkedList is empty.
+        if(!LinkedList){
+            this.head = newNode;
+            this.tail = newNode;
+
+            return;
+        }
+
+        //Make the last  item refer to the new node
+        this.tail.next = newNode;
+        //Make the newly added node the tail node
+        this.tail = newNode;
+
+}
 }
 
 
