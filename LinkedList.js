@@ -90,6 +90,19 @@ deleteHead(){
     }
 }
 
+//Transform the LinkedList to an array.
+toArray(){
+    const items = [];
+    let currentNode = this.head;
+
+    while(currentNode){
+        items.push(currentNode.data);
+        currentNode = currentNode.next;
+    }
+
+    return items;
+}
+
 
 
 }
