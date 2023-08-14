@@ -63,6 +63,19 @@ traverse() {
 //Accessing an element in the LinkedList. Algorithmic Complexity = O(n)
 find(value){
     let currentNode = this.head;
+
+    while(currentNode){
+        if(currentNode.data == value){
+            return currentNode;
+        }
+        currentNode = currentNode.next;
+    }
+    return null;
+}
+
+//Delete an element from the start of an array. Algorithmic Complexity = O(1)
+deleteHead(){
+    
 }
 
 
