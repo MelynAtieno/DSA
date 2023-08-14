@@ -49,6 +49,24 @@ append(value){
         this.tail = newNode;
 
 }
+
+// Traverse a LinkedList. Visit each node of the LinkedList. Algorithmic Complexity = O(n)
+traverse() {
+    let currentNode = this.head
+
+    while(currentNode){
+        console.log(currentNode.data);
+        currentNode = currentNode.next;
+    }
+}
+
+//Accessing an element in the LinkedList. Algorithmic Complexity = O(n)
+find(value){
+    let currentNode = this.head;
+}
+
+
+
 }
 
 
