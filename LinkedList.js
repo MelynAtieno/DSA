@@ -75,7 +75,19 @@ find(value){
 
 //Delete an element from the start of an array. Algorithmic Complexity = O(1)
 deleteHead(){
-    
+    //check if the head is empty. If it is empty, we do not need to delete anything.
+    if(!this.head){
+        return;
+    }
+
+    //if there is more than one node in the LinkedList
+
+    if(this.head.next){
+        this.head = this.head.next
+    } else {
+        this.head = null;
+        this.tail = null
+    }
 }
 
 
