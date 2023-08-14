@@ -103,9 +103,15 @@ toArray(){
     return items;
 }
 
-
-
 }
+
+const list = new LinkedList();
+
+list.append(4)
+list.append(6)
+list.append(2)
+
+console.log(list);
 
 
 
