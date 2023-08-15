@@ -32,11 +32,10 @@ prepend(value){
 //Add an element at the end of the list. Algorithmic Complexity = O(1)
 append(value){
     //create a new node
-    const newNode = new Node(value, null);
-        // Change the tail to be the newly created node
-        this.tail = newNode;
+    const newNode = new Node(value);
+        
         //Check if the LinkedList is empty.
-        if(!LinkedList){
+        if(!this.head){
             this.head = newNode;
             this.tail = newNode;
 
@@ -65,7 +64,7 @@ find(value){
     let currentNode = this.head;
 
     while(currentNode){
-        if(currentNode.data == value){
+        if(currentNode.data === value){
             return currentNode;
         }
         currentNode = currentNode.next;
@@ -83,10 +82,10 @@ deleteHead(){
     //if there is more than one node in the LinkedList
 
     if(this.head.next){
-        this.head = this.head.next
+        this.head = this.head.next;
     } else {
         this.head = null;
-        this.tail = null
+        this.tail = null;
     }
 }
 
@@ -107,11 +106,18 @@ toArray(){
 
 const list = new LinkedList();
 
-list.append(4)
-list.append(6)
-list.append(2)
+list.append(4);
+list.append(3);
+list.append(7);
+list.append(6);
+console.log(list.toArray());
 
-console.log(list);
+list.prepend(1);
+console.log(list.toArray());
+
+list.deleteHead();
+console.log(list.toArray());
+
 
 
 
