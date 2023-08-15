@@ -98,6 +98,7 @@ toArray(){
         items.push(currentNode.data);
         currentNode = currentNode.next;
     }
+    
 
     return items;
 }
